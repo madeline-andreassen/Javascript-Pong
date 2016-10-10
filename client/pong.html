@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pong</title>
+
+	<style>
+	canvas {
+		display: block;
+		position: absolute;
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	.button {
+	    background-color: #87cefa;
+	    color: black;
+	    padding: 5px 12px;
+	    text-decoration: none;
+	    font-size: 12px;
+	}
+	</style>
+</head>
+<body>
+	<script src="./pong.js"></script>
+	<input type="button" id="startbtn" value="START" class="button"
+	onclick="start(1); value = value === 'START' ? 'PAUSE' : 'START';"/>
+	<input type="button" onclick="start(0)" value="RESET" class="button"/>
+	<br><br>
+	<input type="button" id="easybtn" value="EASY" onclick="easy()" class="button"/>
+	<input type="button" id="mediumbtn" value="MEDIUM" onclick="medium()" style="background-color: #4169e1;" class="button"/>
+	<input type="button" id="hardbtn" value="HARD" onclick="hard()" class="button"/>
+	<br><br>
+	<input type="button" value="ENDLESS" id="endlessbtn" class="button"
+	onclick="mode(value);"/>
+</body>
+</html>
